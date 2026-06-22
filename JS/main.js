@@ -45,12 +45,8 @@ function addNewContact(){
         timer: 1000,
         showConfirmButton: false,
         });
-        if(searchInput.value !== ""){
-            searchContacts();
-        }
-        else{
-            displayContacts();
-        }
+        searchInput.value = ""; 
+        displayContacts();
     }
 }
 
