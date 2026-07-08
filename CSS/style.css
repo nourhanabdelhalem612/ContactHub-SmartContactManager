@@ -232,6 +232,18 @@ body{
   transition: all 0.3s ease;
   position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.contact-detail span{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;         
+    text-overflow: ellipsis; 
+    max-width: 100%;          
+}
+.contact-detail.email span{
+    max-width: 200px;
 }
 .contact-card:hover{
   border-color: var(--purple);
@@ -394,9 +406,11 @@ body{
 
 .contact-actions{
   display: flex;
-  gap: 1rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border-color);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .contact-action{
